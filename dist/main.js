@@ -612,6 +612,24 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/index.css */ "./src/styles/index.css");
 
+var task = [{
+  index: 1,
+  description: 'Wash the dishes',
+  completed: 'true'
+}, {
+  index: 2,
+  description: 'Complete To Do list project',
+  completed: 'true'
+}, {
+  index: 1,
+  description: 'Prepare dinner',
+  completed: 'true'
+}];
+var list = task.map(function (item) {
+  return "\n <li><input type =\"checkbox\">".concat(item.description, "<i class=\"fa-solid fa-ellipsis-vertical\"></i></li>");
+}).join('');
+var tasks = document.querySelector('.tasks');
+tasks.innerHTML += list;
 })();
 
 /******/ })()
