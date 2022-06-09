@@ -12,7 +12,7 @@ const task = [
     completed: 'true',
   },
   {
-    index: 1,
+    index: 3,
     description: 'Prepare dinner',
     completed: 'true',
   },
