@@ -1,5 +1,5 @@
 body {
-  background-image: url("../assets/background.jpg");
+  background-image: url("../assets/background1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -33,7 +33,7 @@ input[type="text"] {
 li {
   list-style: none;
   font-size: 16px;
-  padding: 12px;
+  padding: 8px;
 }
 
 button {
@@ -41,4 +41,24 @@ button {
   margin-left: 2%;
   padding: 8px;
   margin-bottom: 2%;
+}
+
+.delete-btn {
+  display: none;
+}
+
+.checkContainer {
+  background-color: aqua;
+}
+
+.checkTask {
+  text-decoration: line-through;
+}
+
+.active {
+  display: block;
+}
+
+.disable {
+  display: none;
 }
