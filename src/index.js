@@ -10,6 +10,8 @@ const button = document.querySelector('button');
 const listArray = [];
 
 const addTask = (taskValue) => {
+  const localData = JSON.parse(localStorage.getItem('list'));
+  localData.map((i) => listArray.push(i));
   const listItem = document.createElement('li');
   listItem.innerHTML = `
   <input type="checkbox" class="checkbox"/>
@@ -137,7 +139,7 @@ const getData = () => {
     });
   });
 
-  localStorage.setItem('list', JSON.stringify(listArray));
+  // localStorage.setItem('list', JSON.stringify(listArray));
 };
 
 window.addEventListener('load', getData);
@@ -154,3 +156,21 @@ const updateStorage = () => {
   }
   localStorage.setItem('list', JSON.stringify(localData));
 };
+
+const clearAll = () => {
+  const localData = JSON.parse(localStorage.getItem('list'));
+  const listItem = document.querySelectorAll('listItem');
+  listItem.forEach((i) => {
+    if (i.classList.contains('checkContainer')) {
+      deleteTask(i);
+    }
+  });
+  let count = 0;
+  const data = Array.from(localData).filter((i) => i.completed === false);
+  data.map((i) => i.index = count += 1);
+  localStorage.setItem('list', JSON.stringify(data));
+};
+
+button.addEventListener('click', () => {
+  clearAll();
+});
