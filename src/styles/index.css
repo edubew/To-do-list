@@ -31,9 +31,17 @@ input[type="text"] {
 }
 
 li {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
   font-size: 16px;
   padding: 8px;
+  margin: 0 5%;
+  border: 1px solid #000;
+}
+
+li span {
+  align-self: flex-start;
 }
 
 button {
@@ -48,7 +56,7 @@ button {
 }
 
 .checkContainer {
-  background-color: aqua;
+  background-color: rgb(62, 19, 19);
 }
 
 .checkTask {
