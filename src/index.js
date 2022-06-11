@@ -1,7 +1,7 @@
 import './styles/index.css';
 import Task from './Task';
 
-const listContainer = document.querySelector('.list-container');
+// const listContainer = document.querySelector('.list-container');
 const inputField = document.querySelector('input');
 const tasks = document.querySelector('.tasks');
 const button = document.querySelector('button');
@@ -11,6 +11,7 @@ const listArray = [];
 
 const addTask = (taskValue) => {
   const listItem = document.createElement('li');
+  // listItem.className = 'listItem'
   listItem.innerHTML = `
   <input type="checkbox" class="checkbox"/>
   <span>${taskValue}</span >
@@ -35,13 +36,14 @@ const addTask = (taskValue) => {
   const storedData = new Task(taskValue, false, checkbox.length - 1);
   listArray.push(storedData);
   localStorage.setItem('list', JSON.stringify(listArray));
+  updateStorage();
 
   // Edit event listener
   const editBtn = document.querySelectorAll('.edit-btn');
   editBtn.forEach((i) => {
     i.addEventListener('click', () => {
+      i.parentElement.classList.add('checkContainer');
       editTask(listItem, i.previousElementSibling);
-      // updateStorage();
     });
   });
 
@@ -115,6 +117,7 @@ const getData = () => {
     editBtn.forEach((i) => {
       i.addEventListener('click', () => {
         editTask(listItem, i.previousElementSibling);
+        i.parentElement.classList.add('checkContainer');
       });
     });
   });
@@ -146,7 +149,7 @@ const updateStorage = () => {
   const localData = JSON.parse(localStorage.getItem('list'));
   const task = document.querySelectorAll('span');
   for (let i = 0; i < task.length; i += 1) {
-    if (task[i].classList.contains('checkTask')) {
+    if (task[i].classList.contains('checkContainer')) {
       localData[i].completed = true;
     } else {
       localData[i].completed = false;
