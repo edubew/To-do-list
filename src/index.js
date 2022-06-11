@@ -32,8 +32,8 @@ const addTask = (taskValue) => {
   });
 
   // Add data to local storage
-  const store = new Task(taskValue, false, checkbox.length - 1);
-  listArray.push(store);
+  const storedData = new Task(taskValue, false, checkbox.length - 1);
+  listArray.push(storedData);
   localStorage.setItem('list', JSON.stringify(listArray));
 
   // Edit event listener
@@ -41,7 +41,7 @@ const addTask = (taskValue) => {
   editBtn.forEach((i) => {
     i.addEventListener('click', () => {
       editTask(listItem, i.previousElementSibling);
-      updateStorage();
+      // updateStorage();
     });
   });
 
@@ -72,7 +72,7 @@ const editTask = (listItem, task) => {
   listItem.replaceChild(editInput, task);
   editInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
-      const listItemContainers = document.querySelectorAll('.listItem');
+      const listItemContainers = document.querySelectorAll('listItem');
       const storedData = JSON.parse(localStorage.getItem('list'));
       for (let i = 0; i < listItemContainers.length; i += 1) {
         if (listItemContainers[i].classList.contains('checkContainer')) {
@@ -90,7 +90,7 @@ const editTask = (listItem, task) => {
 // Delete task from list
 const deleteTask = (task) => {
   tasks.removeChild(task);
-  let count = 0;
+  let count = -1;
   const storedData = JSON.parse(localStorage.getItem('list'));
   const data = Array.from(storedData).filter((i) => i.completed === false);
   data.map((i) => i.index = count += 1);
