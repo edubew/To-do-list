@@ -67,21 +67,22 @@ inputField.addEventListener('keypress', (e) => {
 // edit functionality
 const editTask = (listItem, task) => {
   const editInput = document.createElement('input');
+  const storedData = JSON.parse(localStorage.getItem('list'));
   editInput.type = 'text';
   editInput.className = 'editInput';
   editInput.value = task.textContent;
   listItem.replaceChild(editInput, task);
   editInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-      const listItemContainers = document.querySelectorAll('listItem');
-      const storedData = JSON.parse(localStorage.getItem('list'));
-      for (let i = 0; i < listItemContainers.length; i += 1) {
-        if (listItemContainers[i].classList.contains('checkContainer')) {
+    if (e.key === 'Enter' && editInput.value) {
+      const result = storedData.filter((text) => text.description === task.textContent);
+      const emptyArray = [];
+      for (let i = 0; i < storedData.length; i += 1) {
+        if (storedData[i].index === result[0].index) {
           storedData[i].description = editInput.value;
-          localStorage.setItem('list', JSON.stringify(storedData));
         }
+        emptyArray.push(storedData[i]);
+        localStorage.setItem('list', JSON.stringify(emptyArray));
       }
-      editInput.parentElement.classList.remove('checkContainer');
       listItem.replaceChild(task, editInput);
       task.textContent = editInput.value;
     }
