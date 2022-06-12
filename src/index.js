@@ -1,17 +1,17 @@
 import './styles/index.css';
 import Task from './Task';
 
-// const listContainer = document.querySelector('.list-container');
+const listContainer = document.querySelector('.list-container');
 const inputField = document.querySelector('input');
 const tasks = document.querySelector('.tasks');
 const button = document.querySelector('button');
+const data = JSON.parse(localStorage.getItem('list'));
 
 // add task to the UI functionality
 const listArray = [];
 
 const addTask = (taskValue) => {
   const listItem = document.createElement('li');
-  // listItem.className = 'listItem'
   listItem.innerHTML = `
   <input type="checkbox" class="checkbox"/>
   <span>${taskValue}</span >
@@ -36,14 +36,13 @@ const addTask = (taskValue) => {
   const storedData = new Task(taskValue, false, checkbox.length - 1);
   listArray.push(storedData);
   localStorage.setItem('list', JSON.stringify(listArray));
-  updateStorage();
 
   // Edit event listener
   const editBtn = document.querySelectorAll('.edit-btn');
   editBtn.forEach((i) => {
     i.addEventListener('click', () => {
-      i.parentElement.classList.add('checkContainer');
       editTask(listItem, i.previousElementSibling);
+      // updateStorage();
     });
   });
 
@@ -68,21 +67,22 @@ inputField.addEventListener('keypress', (e) => {
 // edit functionality
 const editTask = (listItem, task) => {
   const editInput = document.createElement('input');
+  const storedData = JSON.parse(localStorage.getItem('list'));
   editInput.type = 'text';
   editInput.className = 'editInput';
   editInput.value = task.textContent;
   listItem.replaceChild(editInput, task);
   editInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-      const listItemContainers = document.querySelectorAll('listItem');
-      const storedData = JSON.parse(localStorage.getItem('list'));
-      for (let i = 0; i < listItemContainers.length; i += 1) {
-        if (listItemContainers[i].classList.contains('checkContainer')) {
+    if (e.key === 'Enter' && editInput.value) {
+      const result = storedData.filter((text) => text.description === task.textContent);
+      const emptyArray = [];
+      for (let i = 0; i < storedData.length; i += 1) {
+        if (storedData[i].index === result[0].index) {
           storedData[i].description = editInput.value;
-          localStorage.setItem('list', JSON.stringify(storedData));
         }
+        emptyArray.push(storedData[i]);
+        localStorage.setItem('list', JSON.stringify(emptyArray));
       }
-      editInput.parentElement.classList.remove('checkContainer');
       listItem.replaceChild(task, editInput);
       task.textContent = editInput.value;
     }
@@ -101,7 +101,6 @@ const deleteTask = (task) => {
 
 // Get data from local storage
 const getData = () => {
-  const data = JSON.parse(localStorage.getItem('list'));
   data.map((i) => {
     listArray.push(i);
     const listItem = document.createElement('li');
@@ -117,7 +116,6 @@ const getData = () => {
     editBtn.forEach((i) => {
       i.addEventListener('click', () => {
         editTask(listItem, i.previousElementSibling);
-        i.parentElement.classList.add('checkContainer');
       });
     });
   });
@@ -149,7 +147,7 @@ const updateStorage = () => {
   const localData = JSON.parse(localStorage.getItem('list'));
   const task = document.querySelectorAll('span');
   for (let i = 0; i < task.length; i += 1) {
-    if (task[i].classList.contains('checkContainer')) {
+    if (task[i].classList.contains('checkTask')) {
       localData[i].completed = true;
     } else {
       localData[i].completed = false;
@@ -157,3 +155,20 @@ const updateStorage = () => {
   }
   localStorage.setItem('list', JSON.stringify(localData));
 };
+
+const clearAll = () => {
+  const localData = JSON.parse(localStorage.getItem('list'));
+  const listItem = document.querySelectorAll('listItem');
+  listItem.forEach((i) => {
+    if (i.classList.contains('checkContainer')) {
+      deleteTask(i);
+    }
+  });
+  let count = 0;
+  const data = Array.from(localData).filter((i) => i.completed === false);
+  data.map((i) => i.index = count += 1);
+  localStorage.setItem('list', JSON.stringify(data));
+  window.location.reload();
+};
+
+button.addEventListener('click', clearAll);
