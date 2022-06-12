@@ -5,13 +5,12 @@ const listContainer = document.querySelector('.list-container');
 const inputField = document.querySelector('input');
 const tasks = document.querySelector('.tasks');
 const button = document.querySelector('button');
+const data = JSON.parse(localStorage.getItem('list'));
 
 // add task to the UI functionality
 const listArray = [];
 
 const addTask = (taskValue) => {
-  const localData = JSON.parse(localStorage.getItem('list'));
-  localData.map((i) => listArray.push(i));
   const listItem = document.createElement('li');
   listItem.innerHTML = `
   <input type="checkbox" class="checkbox"/>
@@ -101,7 +100,6 @@ const deleteTask = (task) => {
 
 // Get data from local storage
 const getData = () => {
-  const data = JSON.parse(localStorage.getItem('list'));
   data.map((i) => {
     listArray.push(i);
     const listItem = document.createElement('li');
@@ -139,7 +137,7 @@ const getData = () => {
     });
   });
 
-  // localStorage.setItem('list', JSON.stringify(listArray));
+  localStorage.setItem('list', JSON.stringify(listArray));
 };
 
 window.addEventListener('load', getData);
@@ -169,8 +167,7 @@ const clearAll = () => {
   const data = Array.from(localData).filter((i) => i.completed === false);
   data.map((i) => i.index = count += 1);
   localStorage.setItem('list', JSON.stringify(data));
+  window.location.reload();
 };
 
-button.addEventListener('click', () => {
-  clearAll();
-});
+button.addEventListener('click', clearAll);
