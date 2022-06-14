@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node your-script.js",
     "build": "webpack",
     "dev": "webpack serve"
   },
