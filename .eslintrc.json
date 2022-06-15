@@ -15,7 +15,13 @@
   "rules": {
     "no-shadow": "off",
     "no-param-reassign": "off",
-    "eol-last": "off"
+    "eol-last": "off",
+    "no-return-assign": "off",
+    "no-multi-assign" : "off",
+    "array-callback-return": "off",
+    // "no-undef": "off",
+    "no-unused-vars": "off",
+    "no-use-before-define": "off"
   },
   "ignorePatterns": [
     "dist/",
