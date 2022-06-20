@@ -25,7 +25,7 @@
 
   ## Setup
    - git init
-   - git clone https://github.com/edubew/Awesome-books.git
+   - git clone https://github.com/edubew/To-do-list.git
 
 
 
