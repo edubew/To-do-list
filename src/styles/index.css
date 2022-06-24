@@ -1,15 +1,34 @@
-body {
-  background-image: url("../assets/background1.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  color: #fff;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-style: italic;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to right top, #100110, #5c061a);
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  width: 60%;
+  background:
+    linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.3)
+    );
+  border-radius: 20px;
 }
 
 .list-container {
-  background-color: #000;
-  opacity: 0.7;
-  margin: 20% 5%;
+  background: #fff;
+  opacity: 0.6;
+  margin: 10%;
 }
 
 .list-container h3 {
@@ -20,13 +39,16 @@ body {
 }
 
 .input-field {
-  width: 90%;
+  width: 95%;
   padding: 8px;
-  margin-left: 2%;
+  margin: 5% 2%;
+  border: none;
+  border-bottom: solid #5c061a 2px;
+  border-right: solid #5c061a 2px;
 }
 
 input[type="text"] {
-  font-size: 14px;
+  font-size: 16px;
   color: #000;
 }
 
@@ -35,20 +57,18 @@ li {
   justify-content: space-between;
   list-style: none;
   font-size: 16px;
-  padding: 8px;
-  margin: 0 5%;
-  border: 1px solid #000;
-}
-
-li span {
-  align-self: flex-start;
+  font-weight: 600;
+  padding: 5px;
+  margin: 1% 2%;
+  border-bottom: 1px solid #000;
 }
 
 button {
-  width: 90%;
-  margin-left: 2%;
+  width: 95%;
+  margin: 2%;
   padding: 8px;
-  margin-bottom: 2%;
+  font-size: 16px;
+  border: solid #5c061a 1px;
 }
 
 .delete-btn {
@@ -56,7 +76,7 @@ button {
 }
 
 .checkContainer {
-  background-color: rgb(62, 19, 19);
+  background: #fa8743;
 }
 
 .checkTask {
