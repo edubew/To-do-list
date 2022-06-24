@@ -45,17 +45,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
-
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/background1.jpg */ "./src/assets/background1.jpg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n  color: #fff;\n  box-sizing: border-box;\n}\n\n.list-container {\n  background-color: #000;\n  opacity: 0.7;\n  margin: 20% 5%;\n}\n\n.list-container h3 {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 12px;\n}\n\n.input-field {\n  width: 90%;\n  padding: 8px;\n  margin-left: 2%;\n}\n\ninput[type=text] {\n  font-size: 14px;\n  color: #000;\n}\n\nli {\n  display: flex;\n  justify-content: space-between;\n  list-style: none;\n  font-size: 16px;\n  padding: 8px;\n  margin: 0 5%;\n  border: 1px solid #000;\n}\n\nli span {\n  align-self: flex-start;\n}\n\nbutton {\n  width: 90%;\n  margin-left: 2%;\n  padding: 8px;\n  margin-bottom: 2%;\n}\n\n.delete-btn {\n  display: none;\n}\n\n.checkContainer {\n  background-color: rgb(62, 19, 19);\n}\n\n.checkTask {\n  text-decoration: line-through;\n}\n\n.active {\n  display: block;\n}\n\n.disable {\n  display: none;\n}", "",{"version":3,"sources":["webpack://./src/styles/index.css"],"names":[],"mappings":"AAAA;EACE,yDAAA;EACA,4BAAA;EACA,0BAAA;EACA,WAAA;EACA,sBAAA;AACF;;AAEA;EACE,sBAAA;EACA,YAAA;EACA,cAAA;AACF;;AAEA;EACE,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,aAAA;AACF;;AAEA;EACE,UAAA;EACA,YAAA;EACA,eAAA;AACF;;AAEA;EACE,eAAA;EACA,WAAA;AACF;;AAEA;EACE,aAAA;EACA,8BAAA;EACA,gBAAA;EACA,eAAA;EACA,YAAA;EACA,YAAA;EACA,sBAAA;AACF;;AAEA;EACE,sBAAA;AACF;;AAEA;EACE,UAAA;EACA,eAAA;EACA,YAAA;EACA,iBAAA;AACF;;AAEA;EACE,aAAA;AACF;;AAEA;EACE,iCAAA;AACF;;AAEA;EACE,6BAAA;AACF;;AAEA;EACE,cAAA;AACF;;AAEA;EACE,aAAA;AACF","sourcesContent":["body {\r\n  background-image: url(\"../assets/background1.jpg\");\r\n  background-repeat: no-repeat;\r\n  background-size: 100% 100%;\r\n  color: #fff;\r\n  box-sizing: border-box;\r\n}\r\n\r\n.list-container {\r\n  background-color: #000;\r\n  opacity: 0.7;\r\n  margin: 20% 5%;\r\n}\r\n\r\n.list-container h3 {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  padding: 12px;\r\n}\r\n\r\n.input-field {\r\n  width: 90%;\r\n  padding: 8px;\r\n  margin-left: 2%;\r\n}\r\n\r\ninput[type=\"text\"] {\r\n  font-size: 14px;\r\n  color: #000;\r\n}\r\n\r\nli {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  list-style: none;\r\n  font-size: 16px;\r\n  padding: 8px;\r\n  margin: 0 5%;\r\n  border: 1px solid #000;\r\n}\r\n\r\nli span {\r\n  align-self: flex-start;\r\n}\r\n\r\nbutton {\r\n  width: 90%;\r\n  margin-left: 2%;\r\n  padding: 8px;\r\n  margin-bottom: 2%;\r\n}\r\n\r\n.delete-btn {\r\n  display: none;\r\n}\r\n\r\n.checkContainer {\r\n  background-color: rgb(62, 19, 19);\r\n}\r\n\r\n.checkTask {\r\n  text-decoration: line-through;\r\n}\r\n\r\n.active {\r\n  display: block;\r\n}\r\n\r\n.disable {\r\n  display: none;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-style: italic;\n}\n\nbody {\n  min-height: 100vh;\n  background: linear-gradient(to right top, #100110, #5c061a);\n  background-repeat: no-repeat;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\nsection {\n  width: 60%;\n  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));\n  border-radius: 20px;\n}\n\n.list-container {\n  background: #fff;\n  opacity: 0.6;\n  margin: 10%;\n}\n\n.list-container h3 {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 12px;\n}\n\n.input-field {\n  width: 95%;\n  padding: 8px;\n  margin: 5% 2%;\n  border: none;\n  border-bottom: solid #5c061a 2px;\n  border-right: solid #5c061a 2px;\n}\n\ninput[type=text] {\n  font-size: 16px;\n  color: #000;\n}\n\nli {\n  display: flex;\n  justify-content: space-between;\n  list-style: none;\n  font-size: 16px;\n  font-weight: 600;\n  padding: 5px;\n  margin: 1% 2%;\n  border-bottom: 1px solid #000;\n}\n\nbutton {\n  width: 95%;\n  margin: 2%;\n  padding: 8px;\n  font-size: 16px;\n  border: solid #5c061a 1px;\n}\n\n.delete-btn {\n  display: none;\n}\n\n.checkContainer {\n  background: #fa8743;\n}\n\n.checkTask {\n  text-decoration: line-through;\n}\n\n.active {\n  display: block;\n}\n\n.disable {\n  display: none;\n}", "",{"version":3,"sources":["webpack://./src/styles/index.css"],"names":[],"mappings":"AAAA;EACE,SAAA;EACA,UAAA;EACA,sBAAA;EACA,kBAAA;AACF;;AAEA;EACE,iBAAA;EACA,2DAAA;EACA,4BAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;AACF;;AAEA;EACE,UAAA;EACA,gGACE;EAKF,mBAAA;AAJF;;AAOA;EACE,gBAAA;EACA,YAAA;EACA,WAAA;AAJF;;AAOA;EACE,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,aAAA;AAJF;;AAOA;EACE,UAAA;EACA,YAAA;EACA,aAAA;EACA,YAAA;EACA,gCAAA;EACA,+BAAA;AAJF;;AAOA;EACE,eAAA;EACA,WAAA;AAJF;;AAOA;EACE,aAAA;EACA,8BAAA;EACA,gBAAA;EACA,eAAA;EACA,gBAAA;EACA,YAAA;EACA,aAAA;EACA,6BAAA;AAJF;;AAOA;EACE,UAAA;EACA,UAAA;EACA,YAAA;EACA,eAAA;EACA,yBAAA;AAJF;;AAOA;EACE,aAAA;AAJF;;AAOA;EACE,mBAAA;AAJF;;AAOA;EACE,6BAAA;AAJF;;AAOA;EACE,cAAA;AAJF;;AAOA;EACE,aAAA;AAJF","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n  font-style: italic;\r\n}\r\n\r\nbody {\r\n  min-height: 100vh;\r\n  background: linear-gradient(to right top, #100110, #5c061a);\r\n  background-repeat: no-repeat;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n}\r\n\r\nsection {\r\n  width: 60%;\r\n  background:\r\n    linear-gradient(\r\n      to right bottom,\r\n      rgba(255, 255, 255, 0.6),\r\n      rgba(255, 255, 255, 0.3)\r\n    );\r\n  border-radius: 20px;\r\n}\r\n\r\n.list-container {\r\n  background: #fff;\r\n  opacity: 0.6;\r\n  margin: 10%;\r\n}\r\n\r\n.list-container h3 {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  padding: 12px;\r\n}\r\n\r\n.input-field {\r\n  width: 95%;\r\n  padding: 8px;\r\n  margin: 5% 2%;\r\n  border: none;\r\n  border-bottom: solid #5c061a 2px;\r\n  border-right: solid #5c061a 2px;\r\n}\r\n\r\ninput[type=\"text\"] {\r\n  font-size: 16px;\r\n  color: #000;\r\n}\r\n\r\nli {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  list-style: none;\r\n  font-size: 16px;\r\n  font-weight: 600;\r\n  padding: 5px;\r\n  margin: 1% 2%;\r\n  border-bottom: 1px solid #000;\r\n}\r\n\r\nbutton {\r\n  width: 95%;\r\n  margin: 2%;\r\n  padding: 8px;\r\n  font-size: 16px;\r\n  border: solid #5c061a 1px;\r\n}\r\n\r\n.delete-btn {\r\n  display: none;\r\n}\r\n\r\n.checkContainer {\r\n  background: #fa8743;\r\n}\r\n\r\n.checkTask {\r\n  text-decoration: line-through;\r\n}\r\n\r\n.active {\r\n  display: block;\r\n}\r\n\r\n.disable {\r\n  display: none;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -169,44 +164,6 @@ module.exports = function (cssWithMappingToString) {
   };
 
   return list;
-};
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
-/*!********************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
-  \********************************************************/
-/***/ ((module) => {
-
-
-
-module.exports = function (url, options) {
-  if (!options) {
-    options = {};
-  }
-
-  if (!url) {
-    return url;
-  }
-
-  url = String(url.__esModule ? url.default : url); // If url is already wrapped in quotes, remove them
-
-  if (/^['"].*['"]$/.test(url)) {
-    url = url.slice(1, -1);
-  }
-
-  if (options.hash) {
-    url += options.hash;
-  } // Should url be wrapped?
-  // See https://drafts.csswg.org/css-values-3/#urls
-
-
-  if (/["'() \t\n]|(%20)/.test(url) || options.needQuotes) {
-    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
-  }
-
-  return url;
 };
 
 /***/ }),
@@ -600,16 +557,6 @@ function styleTagTransform(css, styleElement) {
 
 module.exports = styleTagTransform;
 
-/***/ }),
-
-/***/ "./src/assets/background1.jpg":
-/*!************************************!*\
-  !*** ./src/assets/background1.jpg ***!
-  \************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "background1.jpg";
-
 /***/ })
 
 /******/ 	});
@@ -638,9 +585,6 @@ module.exports = __webpack_require__.p + "background1.jpg";
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -666,18 +610,6 @@ module.exports = __webpack_require__.p + "background1.jpg";
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -692,52 +624,6 @@ module.exports = __webpack_require__.p + "background1.jpg";
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	(() => {
-/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
-/******/ 		
-/******/ 		// object to store loaded and loading chunks
-/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-/******/ 		var installedChunks = {
-/******/ 			"main": 0
-/******/ 		};
-/******/ 		
-/******/ 		// no chunk on demand loading
-/******/ 		
-/******/ 		// no prefetching
-/******/ 		
-/******/ 		// no preloaded
-/******/ 		
-/******/ 		// no HMR
-/******/ 		
-/******/ 		// no HMR manifest
-/******/ 		
-/******/ 		// no on chunks loaded
-/******/ 		
-/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */

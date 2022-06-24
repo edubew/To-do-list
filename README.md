@@ -28,6 +28,9 @@
    - git clone https://github.com/edubew/To-do-list.git
 
 
+## Live Demo
+
+![Screenshot](assets/screenshot.PNG)
 
 
 ## Authors
