@@ -29,7 +29,7 @@
 
 
 ## Live Demo
-[To-Do-List]( https://edubew.github.io/To-do-list/)
+[To-Do-List preview]( https://edubew.github.io/To-do-list/)
 
 ![Screenshot](src/assets/screenshot.PNG)
 
