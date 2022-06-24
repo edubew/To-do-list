@@ -30,7 +30,7 @@
 
 ## Live Demo
 
-![Screenshot](assets/screenshot.PNG)
+![Screenshot](src/assets/screenshot.PNG)
 
 
 ## Authors
